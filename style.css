@@ -1,0 +1,244 @@
+body{
+    margin: 0px;
+}
+header{
+    width: 100%;
+    display: block;
+    margin-top: 2rem;
+    position: absolute;
+    height: 3.75rem;
+    
+}
+.grade{
+    grid-template-columns: repeat(24, 1fr);
+    width: 100%;
+    display: grid;
+    row-gap: 0;
+}
+#logo {
+    padding-left: 48px;
+    box-sizing: border-box;
+    position: relative;
+    width: 4rem;
+    max-height: 64px;
+    margin: 0;
+    padding: 0;
+    display: : flex;
+    float: left;
+    box-sizing: border-box;
+    grid-column-start: 3;
+    grid-column-start: 3;
+    align-items: center;
+}
+#logo_2{
+    bottom: 3%;
+    position: absolute;
+    right: 0px;
+    width: 37%;
+    margin-bottom: 0px;
+    display: flex
+}
+#texto {
+heigth: 20.719px;
+width: 7.531px;
+
+}
+#menu{
+    grid-column-start: 5;
+    grid-column-end: 17;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.lista_menu{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 1.5rem;
+    font-family: BradescoSans-semi-bold;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.125rem;
+    white-space: nowrap;
+
+}
+#alternativo{
+    display: none;
+}
+#fundo_verde{
+    background-color: rgb(0, 255,95);
+}
+#pinkBut{
+    grid-column-start: 20;
+    grid-column-end: 23;
+    background-color: #fd6699;
+    color: rgb(255,255,255);
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+section{
+    padding-top: 5rem;
+    position: relative;
+    overflow: unset;
+    display: block;
+    height: 105vh;
+}
+#backgroundImg{
+    grid-column-start: 3;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    z-index: 0;
+    display: block;
+    margin-top: 6vw;
+}
+#main_img{
+    
+   width: 100%;
+}
+#imagem{
+    top: 0px;
+    grid-column-start: 1;
+    grid-column-end: 15;
+    grid-row-start: 1;
+    display: block;
+    position: relative;
+    
+}
+
+#login{
+    grid-column-start: 17;
+    grid-column-end: 22;
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    border-width: 0;
+    border-radius: 5%;
+    background-color: #fd6699;
+    box-shadow: 8px 8px 16px #B03060;
+    width: 100%;
+    height: 20vw;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin: 0 0 4% 0;
+}
+.userInput{
+    margin: 4% 0 8% 0;
+    width: 80%;
+    height: 10%;
+    display: inline-block; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#login input{
+    
+    box-shadow: 8px 8px 16px #B03060;
+    height: 100%;
+    outline: none;
+    border-width: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+}
+.labelLogin{
+    position: absolute;
+    top 0;
+    left: 0;
+    color: #000;
+}
+#butEntrar{
+    width: 60%;
+    height: 12%;
+    color: #B03060;
+
+}
+hr{
+    margin-top: 6%;
+    width: 90%;
+}
+#cadastro{
+    margin: 2% 6% 0% 6%;
+    display: inline-block;
+    color: #fff;
+}
+#seta{
+    fill: #ffffff;
+}
+#wrapper{
+}
+#busca{
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    margin: 5% 20%;
+    background-color: #fd6699;
+    border-radius: 5%;
+    box-shadow: 8px 8px 16px #B03060;
+    align-items: center;
+    justify-content: center;
+}
+.buscaCaixa{
+   z-index: 1;
+   width: 80%;
+   
+}
+.inCaixa{
+    position: relative;
+    width 100%;
+    z-index: 2;
+    margin: 2vw 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+}
+.inLabel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#ativoCaixa{
+    width: 80%;
+    z-index: 2;
+    background-color: #fff;
+}
+.inEntrada{
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 4;
+    background-color: transparent;
+    
+}
+
+table{
+    display: none;
+    align-items: center;
+    justify-items: center;
+    border-left: solid;
+    border-top: solid;
+
+}
+td{
+    border-right: solid;
+    border-bottom: solid;
+
+}
