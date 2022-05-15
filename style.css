@@ -254,3 +254,8 @@ td{
     width: 15vh;
     margin-left: 10%;
 }
+.aviso{
+    background-color: #8a0e3b;
+    font-style: bold;
+    display: none;
+}
