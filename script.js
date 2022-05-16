@@ -38,7 +38,6 @@ let token=localStorage.getItem("token"),
     inEmail.addEventListener('input',()=>{ocultarLabel(inEmail,inEmailLabel,"Email:");});
     inSenha.addEventListener('input',()=>{ocultarLabel(inSenha,inSenhaLabel,"Password:");});
     butSair.addEventListener('click',()=>{
-        console.log("oi");
         token="";
         localStorage.clear();
         estado("grid","grid","none","none");
@@ -54,7 +53,21 @@ let token=localStorage.getItem("token"),
 function autLogin(){
     let email=document.getElementById("inEmail");
     let senha=document.getElementById("inSenha");
-    login={email:email.value,
+    let avisoEmail=document.getElementById("avisoEmail");
+    let avisoSenha=document.getElementById("avisoSenha");
+    if(email.value.length<3){
+        avisoEmail.style.display="block";
+    }
+    else{
+        avisoEmail.style.display="none";
+    }
+    if(senha.value.length<3){
+        avisoSenha.style.display="block";
+    }
+    else{
+        avisoSenha.style.display="none";
+    }
+    login={email: email.value,
         password: senha.value
     };
     let dadoString= JSON.stringify(login);
@@ -79,32 +92,20 @@ function loadDoc(url,valor){
     httpReq.send(valor);
 }
 function ocultarLabel(dadoIn,labelIn,texto){
-    console.log(labelIn);
     if(dadoIn.value!="")
         labelIn.innerHTML="";
     else
         labelIn.innerHTML=texto;
 }
-
 function consultaAtivo(){
     var inData, outData;
     inData=`${anoIn.value}-`;
-    
     inData=`${inData}${mesIn.value}-`;
-    console.log(mesIn.value);
-    
     inData=`${inData}${diaIn.value}`;
-    
     outData=`${anoOut.value}-`;
-    
     outData=`${outData}${mesOut.value}-`;
-    
     outData=`${outData}${diaOut.value}`;
-    console.log(inData)
-    
-
     url=`https://data.nasdaq.com/api/v3/datasets/WIKI/${ativo.value}.json?start_date=${anoIn.value}-${mesIn.value}-${diaIn.value}&end_date=${anoOut.value}-${mesOut.value}-${diaOut.value}&api_key=8D1vXonNH2mHyLz3huVa`;
-    console.log(url);
     var httpreq=new XMLHttpRequest();
     httpreq.open("GET",url,true);
     httpreq.setRequestHeader("Content-Type","applicantion/json");
@@ -116,7 +117,6 @@ function consultaAtivo(){
             let respostaJSON=JSON.parse(resposta);
             respostaJSON.dataset.data.forEach((dolar)=>{
                 let item=document.getElementById("listaResultado");
-                console.log(item);
                 item.innerHTML=`${item.innerHTML}<tr><td>${dolar[0]}</td><td>${dolar[1]}</td><td>${dolar[4]}</td></tr>`;
             }); 
         }
@@ -131,5 +131,3 @@ function estado(stat1,stat2,stat3,stat4){
     document.getElementById("busca").style.display= stat3;
     document.querySelector("table").style.display= stat4;
 }
-
-
